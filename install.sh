@@ -18,7 +18,6 @@ for dotfile in "${dotfiles[@]}"; do
 done
 
 directories=(\
-  bin \
   .vimbackup \
 )
 
