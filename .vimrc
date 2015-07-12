@@ -26,6 +26,7 @@ NeoBundle 'git://github.com/kchmck/vim-coffee-script'
 NeoBundle 'git://github.com/pangloss/vim-javascript'
 NeoBundle 'git://github.com/othree/html5.vim'
 NeoBundle 'git://github.com/derekwyatt/vim-scala'
+NeoBundle 'https://github.com/digitaltoad/vim-jade.git'
 NeoBundle 'https://github.com/tomasr/molokai'
 call neobundle#end()
 filetype plugin indent on
