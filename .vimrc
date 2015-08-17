@@ -112,3 +112,6 @@ au BufRead,BufNewFile,BufReadPre *.coffee    set filetype=coffee
 let g:vimfiler_safe_mode_by_default = 0 "disable safe mode by default
 let g:unite_cursor_line_highlight = 'Normal'
 
+"syntastic
+let g:syntastic_cpp_compiler_options='--std=c++1y'
+
