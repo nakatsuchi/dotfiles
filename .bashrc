@@ -41,5 +41,12 @@ if [ -e "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+# Python
+if [ -e "$HOME/.pyenv" ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
+# Node.js
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"  # This loads nvm
