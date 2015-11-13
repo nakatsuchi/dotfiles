@@ -7,8 +7,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'git://github.com/Shougo/vimproc.vim', {
       \  'build': {
-      \    'mac': 'make -f make_mac.mak',
-      \    'unix' : 'make -f make_unix.mak',
+      \    'mac': 'make',
+      \    'unix' : 'make',
       \  },
       \}
 NeoBundle 'tpope/vim-surround'
