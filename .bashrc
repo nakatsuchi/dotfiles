@@ -23,3 +23,9 @@ esac
 alias grep='grep --color'
 alias vi=vim
 
+# dummy nvm command to load nvm when required
+nvm() {
+  unset -f nvm
+  . "$HOME/.nvm/nvm.sh"
+  nvm "$@"
+}
