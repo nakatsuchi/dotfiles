@@ -45,7 +45,7 @@ fi
 if [ -e "$HOME/.pyenv" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(rbenv init -)"
+  eval "$(pyenv init -)"
 fi
 
 # Node.js
