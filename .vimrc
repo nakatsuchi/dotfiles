@@ -5,30 +5,31 @@ if has('vim_starting')
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'git://github.com/Shougo/vimproc.vim', {
+NeoBundle 'Shougo/vimproc.vim', {
       \  'build': {
       \    'mac': 'make',
       \    'unix' : 'make',
       \  },
       \}
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'git://github.com/mattn/emmet-vim'
-NeoBundle 'git://github.com/bling/vim-airline'
-NeoBundle 'git://github.com/Shougo/vimshell.vim'
-NeoBundle 'git://github.com/Shougo/neocomplete.vim'
-NeoBundle 'git://github.com/Shougo/neosnippet.vim'
-NeoBundle 'git://github.com/Shougo/unite.vim'
-NeoBundle 'git://github.com/Shougo/neomru.vim'
-NeoBundle 'git://github.com/Shougo/vimfiler.vim'
-NeoBundle 'git://github.com/jpalardy/vim-slime'
-NeoBundle 'git://github.com/scrooloose/syntastic'
-NeoBundle 'git://github.com/kchmck/vim-coffee-script'
-NeoBundle 'git://github.com/pangloss/vim-javascript'
-NeoBundle 'git://github.com/digitaltoad/vim-jade'
-NeoBundle 'git://github.com/othree/html5.vim'
-NeoBundle 'git://github.com/derekwyatt/vim-scala'
-NeoBundle 'https://github.com/digitaltoad/vim-jade.git'
-NeoBundle 'https://github.com/tomasr/molokai'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'jpalardy/vim-slime'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'digitaltoad/vim-jade.git'
+NeoBundle 'sudar/vim-arduino-syntax'
+NeoBundle 'tomasr/molokai'
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
