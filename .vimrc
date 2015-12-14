@@ -12,7 +12,6 @@ NeoBundle 'Shougo/vimproc.vim', {
       \  },
       \}
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'mattn/emmet-vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/neocomplete.vim'
@@ -21,7 +20,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'pangloss/vim-javascript'
