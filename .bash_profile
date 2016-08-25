@@ -18,11 +18,9 @@ if [ -e "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
-# Python
-if [ -e "$HOME/.pyenv" ]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
+# conda
+if [ -e "$HOME/conda" ]; then
+  export PATH="/home/shu/conda/bin:$PATH"
 fi
 
 # Node.js
