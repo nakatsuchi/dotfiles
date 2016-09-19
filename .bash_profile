@@ -20,10 +20,15 @@ fi
 
 # conda
 if [ -e "$HOME/conda" ]; then
-  export PATH="/home/shu/conda/bin:$PATH"
+  export PATH="$HOME/conda/bin:$PATH"
 fi
 
 # Node.js
-if [ -s "$HOME/.nvm/nvm.sh" ]; then
+if [ -e "$HOME/.nvm/nvm.sh" ]; then
   . "$HOME/.nvm/nvm.sh"
+fi
+
+# golang
+if [ -e "$HOME/go" ]; then
+  export PATH="$HOME/go/bin:$PATH"
 fi
