@@ -30,5 +30,6 @@ fi
 
 # golang
 if [ -e "$HOME/go" ]; then
+  export GOROOT="$HOME/go"
   export PATH="$HOME/go/bin:$PATH"
 fi
