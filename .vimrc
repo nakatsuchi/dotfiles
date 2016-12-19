@@ -1,37 +1,31 @@
-"NeoBundle
-if has('vim_starting')
+"Dein.vim
+if &compatible
   set nocompatible
-  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-      \  'build': {
-      \    'mac': 'make',
-      \    'unix' : 'make',
-      \  },
-      \}
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'digitaltoad/vim-jade.git'
-NeoBundle 'sudar/vim-arduino-syntax'
-NeoBundle 'tomasr/molokai'
-call neobundle#end()
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+call dein#begin('~/.vim/dein')
+call dein#add('Shougo/dein.vim')
+call dein#add('tpope/vim-surround')
+call dein#add('bling/vim-airline')
+call dein#add('Shougo/vimshell.vim')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neomru.vim')
+call dein#add('Shougo/vimfiler.vim')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('pangloss/vim-javascript')
+call dein#add('digitaltoad/vim-jade')
+call dein#add('othree/html5.vim')
+call dein#add('derekwyatt/vim-scala')
+call dein#add('digitaltoad/vim-jade.git')
+call dein#add('sudar/vim-arduino-syntax')
+call dein#add('tomasr/molokai')
+call dein#end()
+
 filetype plugin indent on
-NeoBundleCheck
 
 "language
 language C
