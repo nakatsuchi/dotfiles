@@ -26,13 +26,9 @@ if [ -e "$HOME/.pyenv" ]; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-# Node.js
-if [ -e "$HOME/.nvm/nvm.sh" ]; then
-  . "$HOME/.nvm/nvm.sh"
-fi
-
 # golang
 if [ -e "$HOME/go" ]; then
   export GOROOT="$HOME/go"
   export PATH="$HOME/go/bin:$PATH"
 fi
+
