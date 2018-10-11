@@ -7,7 +7,8 @@ set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 call dein#begin('~/.vim/dein')
 call dein#add('Shougo/dein.vim')
 call dein#add('tpope/vim-surround')
-call dein#add('bling/vim-airline')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 call dein#add('Shougo/vimshell.vim')
 call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neosnippet.vim')
@@ -109,4 +110,7 @@ let g:unite_cursor_line_highlight = 'Normal'
 
 "syntastic
 let g:syntastic_cpp_compiler_options='--std=c++1y'
+
+"airline
+let g:airline_theme='wombat'
 

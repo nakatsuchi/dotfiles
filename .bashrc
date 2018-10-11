@@ -14,6 +14,7 @@ export KCODE=u
 # aliases
 case "${OSTYPE}" in
 darwin*)
+  export LSCOLORS=gxfxcxdxbxegedabagacad
   alias ls="ls -G"
   ;;
 linux*)
