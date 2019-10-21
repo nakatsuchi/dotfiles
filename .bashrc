@@ -1,5 +1,7 @@
 # bash 
 set -o vi                   # vi mode
+shopt -s globstar # enable '**' pattern
+shopt -s autocd # change directory without typing 'cd'
 export HISTCONTROL=ignoredups      # ignore duplicates
 export HISTSIZE=10000            # history size
 export HISTFILESIZE=10000        # history size
@@ -24,16 +26,31 @@ esac
 alias grep='grep --color'
 alias vi=vim
 
-# Node.js
-if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(type -t __init_nvm)" = function ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-  declare -a __node_commands=('nvm' 'node' 'npm' 'yarn' 'gulp' 'grunt' 'webpack')
-  function __init_nvm() {
-    for i in "${__node_commands[@]}"; do unalias $i; done
-    . "$NVM_DIR"/nvm.sh
-    unset __node_commands
-    unset -f __init_nvm
-  }
-  for i in "${__node_commands[@]}"; do alias $i='__init_nvm && '$i; done
+# homebrew
+case "${OSTYPE}" in
+darwin*)
+  export PATH=/usr/local/bin:$PATH
+  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+  export MANPATH=/opt/local/share/man:/opt/local/man:$MANPATH
+  ;;
+esac
+
+# path
+export PATH=$HOME/bin:$PATH
+
+# fnm
+if type fnm > /dev/null; then
+  eval "$(fnm env)"
 fi
+
+# pyenv
+if type pyenv > /dev/null; then
+  eval "$(pyenv init -)"
+fi
+
+# google-cloud-sdk
+if [[ -e "/usr/local/Caskroom/google-cloud-sdk" ]]; then
+  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+fi
+

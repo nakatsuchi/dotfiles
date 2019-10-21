@@ -2,29 +2,16 @@
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-call dein#begin('~/.vim/dein')
-call dein#add('Shougo/dein.vim')
-call dein#add('tpope/vim-surround')
-call dein#add('vim-airline/vim-airline')
-call dein#add('vim-airline/vim-airline-themes')
-call dein#add('Shougo/vimshell.vim')
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/vimfiler.vim')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('pangloss/vim-javascript')
-call dein#add('digitaltoad/vim-jade')
-call dein#add('othree/html5.vim')
-call dein#add('derekwyatt/vim-scala')
-call dein#add('digitaltoad/vim-jade.git')
-call dein#add('sudar/vim-arduino-syntax')
-call dein#add('tomasr/molokai')
-call dein#end()
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
+Plug 'tomasr/molokai'
+call plug#end()
 
 filetype plugin indent on
 
@@ -42,12 +29,9 @@ set background=dark
 colorscheme molokai
 
 "keymap
-nnoremap <silent> ,b :Unite buffer -auto-quit<CR>
-nnoremap <silent> ,f :VimFiler<CR>
-nnoremap <silent> ,s :VimShell<CR>
-nnoremap <silent> ,m :Unite file_mru<CR>
-nnoremap <silent> ,r :Unite -buffer-name=register register<CR>
-nnoremap <silent> ,g :Unite grep<CR>
+nnoremap <silent> ,f :NERDTreeToggle<CR>
+
+let loaded_matchparen = 1
 
 "highlight cursor line
 "set cursorline
@@ -103,13 +87,6 @@ au BufRead,BufNewFile,BufReadPre *.fsy       set filetype=fsharp
 
 "CoffeeScript
 au BufRead,BufNewFile,BufReadPre *.coffee    set filetype=coffee
-
-"VimFiler
-let g:vimfiler_safe_mode_by_default = 0 "disable safe mode by default
-let g:unite_cursor_line_highlight = 'Normal'
-
-"syntastic
-let g:syntastic_cpp_compiler_options='--std=c++1y'
 
 "airline
 let g:airline_theme='wombat'

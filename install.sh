@@ -5,12 +5,9 @@ dotfiles_dir=$HOME/dotfiles
 cd $HOME
 
 dotfiles=(\
-  .bin \
-  .bash_profile \
   .bashrc \
   .vimrc \
   .tmux.conf \
-  .gitconfig \
 )
 
 for dotfile in "${dotfiles[@]}"; do
