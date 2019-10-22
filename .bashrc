@@ -32,20 +32,24 @@ darwin*)
   export PATH=/usr/local/bin:$PATH
   export PATH=/opt/local/bin:/opt/local/sbin:$PATH
   export MANPATH=/opt/local/share/man:/opt/local/man:$MANPATH
+
+  # python installed by homebrew
+  if [[ -e "/usr/local/opt/python/libexec/bin" ]]; then
+    export PATH=/usr/local/opt/python/libexec/bin:$PATH
+  fi
+
   ;;
 esac
 
 # path
 export PATH=$HOME/bin:$PATH
 
+# python
+
+
 # fnm
 if type fnm > /dev/null; then
   eval "$(fnm env)"
-fi
-
-# pyenv
-if type pyenv > /dev/null; then
-  eval "$(pyenv init -)"
 fi
 
 # google-cloud-sdk
