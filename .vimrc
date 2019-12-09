@@ -1,4 +1,3 @@
-"Dein.vim
 if &compatible
   set nocompatible
 endif
