@@ -38,14 +38,19 @@ darwin*)
     export PATH=/usr/local/opt/python/libexec/bin:$PATH
   fi
 
+  # pipenv installed by homebrew
+  if [[ -e "/usr/local/opt/pyenv" ]]; then
+    export PYENV_ROOT=/usr/local/opt/pyenv
+  fi
+
   ;;
 esac
 
 # path
 export PATH=$HOME/bin:$PATH
 
-# python
-
+# go
+export PATH=${HOME}/go/bin:$PATH
 
 # fnm
 if type fnm > /dev/null; then
