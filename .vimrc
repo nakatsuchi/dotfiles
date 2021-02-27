@@ -88,9 +88,6 @@ au BufNewFile,BufRead *.py        set nowrap tabstop=4 shiftwidth=4
 au BufRead,BufNewFile,BufReadPre *.fsl       set filetype=fsharp
 au BufRead,BufNewFile,BufReadPre *.fsy       set filetype=fsharp
 
-"CoffeeScript
-au BufRead,BufNewFile,BufReadPre *.coffee    set filetype=coffee
-
 "airline
 let g:airline_theme='wombat'
 
