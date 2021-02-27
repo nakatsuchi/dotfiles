@@ -70,7 +70,9 @@ set incsearch
 
 "mouse scroll
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 "disable beep
 set visualbell
