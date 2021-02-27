@@ -16,7 +16,9 @@ filetype plugin indent on
 
 "language
 language C
-set ambiwidth=double
+if !exists('g:vscode')
+  set ambiwidth=double
+endif
 set fileencodings=utf-8,cp932,ucs-bom,iso-2022-jp,euc-jp,default,latin
 set encoding=utf-8 "for new files
 
